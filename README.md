@@ -105,3 +105,91 @@ public class Homework1_3 {
 	}
 
 }
+
+# Homework4
+import java.util.*;
+
+public class Homework2 {
+
+	public static void main(String[] args) {
+
+		int a;
+
+		int c;
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("성인: ");
+		a = sc.nextInt();
+		
+		System.out.print("어린이: ");
+		c = sc.nextInt();
+		
+		int result = totalPrice(a, c);
+		
+		System.out.println("입장료: " + result + "원");
+
+	}
+	
+	static int totalPrice(int adultNum, int childNum) {
+		
+		int totalNum = adultNum + childNum;
+		int result = adultNum * 20000 + childNum * 9900;
+		
+		if(totalNum >= 5) {
+			
+			result = result * 8 / 10;
+			
+		} else {
+			
+			result = result;
+		}
+		
+		return result;
+		
+	}
+
+}
+
+
+# Homework5
+import java.util.*;
+
+public class Homework3 {
+
+	public static void main(String[] args) {
+		
+		int a;
+		int c;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("성인: ");
+		a = sc.nextInt();
+		
+		System.out.print("어린이: ");
+		c = sc.nextInt();
+		
+		int result = totalPrice(a,c);
+		
+		System.out.println("성인: " + a + "명, " + "어린이: " + c + "명, " + "총 입장료는 " + result + "원입니다.");
+		
+	}
+	
+	static int totalPrice(int adultNum, int childNum) {
+		
+		int totalNum = adultNum + childNum;
+		int adultPrice = adultNum * 20000;
+		int childPrice = childNum * 9900;
+		int result = adultPrice + childPrice;
+		
+		if(totalNum >= 5) {
+			result = result * 8 / 10;
+		}
+		
+		return result;
+		
+	}
+
+}
+
