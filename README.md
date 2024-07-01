@@ -38,3 +38,70 @@ public class Homework1 {
 
 	}
 }
+
+# HomeWork1_2
+
+public class Homework1_2 {
+
+	public static void main(String[] args) {
+		
+		int adultNum = 5;
+		int childNum = 0;
+		int adultPrice = 20000;
+		int childPrice = 9900;
+		
+		int result = totalPrice(adultNum, childNum, adultPrice, childPrice);
+		System.out.println(result);
+
+	}
+	
+	static int totalPrice(int adultNum, int childNum, int adultPrice, int childPrice) {
+		
+		int totalPrice = 0;
+		
+		int totalNum = adultNum + childNum;
+		
+		if (totalNum >= 5) {
+			
+			totalPrice = (adultNum * adultPrice + childNum * childPrice) * 8 / 10;
+		
+		} else {
+			
+			totalPrice = adultNum * adultPrice + childNum * childPrice;
+		}
+		
+		return totalPrice;
+		
+	}
+
+}
+
+# HomeWork1_3
+
+public class Homework1_3 {
+
+	public static void main(String[] args) {
+		
+		int a = 1; //어른 수
+		int c = 2; //아이 수
+		//int total = totalPrice(a, c);
+		
+		System.out.println(totalPrice(a, c) + "원");
+	}
+	
+	static int totalPrice(int adultNum, int childNum) {
+		
+		int totalNum = adultNum + childNum;
+		
+		int result = adultNum * 20000 + childNum * 9900;
+		
+		if (totalNum >= 5) {
+			result = result * 8 / 10;
+		} else {
+			result = result;
+		}
+		
+		return result;
+	}
+
+}
