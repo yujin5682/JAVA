@@ -1,91 +1,64 @@
 import java.util.ArrayList;
 
-import com.lx.animal.Dog;
-import com.lx.house.House;
-
 public class Homework {
 
 	public static void main(String[] args) {
 		
-		//강아지 배열만들기
-		ArrayList<Dog> dogs = new ArrayList<Dog>();
-
-		Dog dog1 = new Dog();
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		ArrayList<Product> products = new ArrayList<Product>();
 		
-		dog1.setName("강아지1");
-		dog1.setInt(10);
-		dog1.setNumber("010-1111-1111");
-		dogs.add(0, dog1);
+		//진짜 매장 만들기
+		Store store1 = new Store();
+		store1.name = "매장1";
 		
 		
+		Customer customer1 = new Customer();
+		customer1.name = "고객1";
+		customer1.age = 10;
+		customer1.phone = "010-1111-1111";
+		customers.add(customer1);
 		
-		Dog dog2 = new Dog();
+		Customer customer2 = new Customer();
+		customer2.name = "고객2";
+		customer2.age = 20;
+		customer2.phone = "010-2222-2222";
+		customers.add(customer2);
 		
-		dog2.setName("강아지2");
-		dog2.setInt(20);
-		dog2.setNumber("010-2222-2222");
-		dogs.add(1, dog2);
-		
-		Dog dog3 = new Dog();
-		
-		dog3.setName("강아지3");
-		dog3.setInt(30);
-		dog3.setNumber("010-3333-3333");
-		dogs.add(2, dog3);
-		
-		Dog dog4 = new Dog();
-
-		dog4.setName("강아지4");
-		dog4.setInt(40);
-		dog4.setNumber("010-4444-4444");
-		dogs.add(3, dog4);
-		
-		Dog dog5 = new Dog();
-		
-		dog5.setName("강아지5");
-		dog5.setInt(50);
-		dog5.setNumber("010-5555-5555");
-		dogs.add(4, dog5);
+		Customer customer3 = new Customer();
+		customer3.name = "고객3";
+		customer3.age = 30;
+		customer3.phone = "010-3333-3333";
+		customers.add(customer3);
 		
 		
-		//집에 강아지들 묶음 넣기
-		House house = new House();
-		house.setName("우리집");
-		house.setDogs(dogs);
 		
-		//마지막 강아지 정보 출력
-		Dog lastDog = dogs.get(dogs.size()-1);
+		Product product1 = new Product();
+		product1.name = "물건1";
+		product1.price = 1000;
+		products.add(product1);
 		
-		//강아지 수 출력
-		System.out.println("강아지 마릿 수 : " + dogs.size() + "마리");
-		System.out.println();
+		Product product2 = new Product();
+		product2.name = "물건2";
+		product2.price = 2000;
+		products.add(product2);
 		
-		
-		//모든 강아지 출력
-		for (Dog dog : house.getDogs()) {
-			System.out.println(house.getName() + " || 이름 : " + dog.getName() + " ||나이 : " + dog.getAge() + "살 || 번호 : " + dog.getNumber());
-		}
-		System.out.println();
+		Product product3 = new Product();
+		product3.name = "물건3";
+		product3.price = 3000;
+		products.add(product3);
 		
 		
-		//모든 강아지의 이름 출력
-		for (Dog dog : house.getDogs()) {
-			System.out.println("강아지 이름 : " + dog.getName());
-		}
-		System.out.println();
+		System.out.println("고객 수 : " + customers.size() + "명" + " || 제품 갯수 : " + products.size() + "개" + "\n");
+		
+		//1번 고객이 2번 물건을 샀을때, 고객이 산 제품, 고객이 산 총 금액, 제품 전체 금액
+		store1.pay(customer1, product2);
 		
 		
-		//마지막 강아지 정보 출력
-		System.out.println("마지막 강아지 : " + lastDog.getName() + " || 나이 : " + lastDog.getAge() + " || 번호 : " + lastDog.getNumber());
-		System.out.println();
-		
-		house.dogRun(dogs);
+		System.out.println(customer1.getBuyProducts());
 		
 		
-//		System.out.println(dogs.get(0).getName());
-//		System.out.println(dogs.get(0).getAge());
-//		System.out.println(dogs.get(0).getNumber());
-
+		
+		
 	}
 
 }
