@@ -37,6 +37,7 @@ public class Store {
 	void pay(Customer customer, Product product) {
 		customer.getBuyProducts().add(product);
 		customer.buyPrice += product.price;
+		
 		product.totalPrice += product.price; 
 		
 		

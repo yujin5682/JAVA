@@ -10,7 +10,8 @@ public class Customer {
 	
 	ArrayList<Product> buyProducts = new ArrayList<>();
 	
-	static int buyPrice;
+	int buyPrice;
+	
 	
 	
 	
