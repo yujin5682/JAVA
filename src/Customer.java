@@ -6,14 +6,11 @@ public class Customer {
 	int age;
 	String phone;
 	
-//	ArrayList<Product> products = new ArrayList<>();
+	ArrayList<Customer> customers = new ArrayList<>();
 	
 	ArrayList<Product> buyProducts = new ArrayList<>();
 	
-	int buyPrice;
-	
-	
-	
+	int buyCount;
 	
 	public String getName() {
 		return name;
@@ -22,14 +19,13 @@ public class Customer {
 		this.name = name;
 	}
 	
-	
 	public int getAge() {
 		return age;
+		
 	}
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
 	
 	public String getPhone() {
 		return phone;
@@ -38,20 +34,20 @@ public class Customer {
 		this.phone = phone;
 	}
 	
+	public ArrayList<Customer> getCustomers(){
+		return customers;
+	}
 	
-//	public ArrayList<Product> getProducts(){
-//		return products;
-//	}
-//	public void setProducts(ArrayList<Product> products) {
-//		this.products = products;
-//	}
+	public void setCustomers(ArrayList<Customer> customers) {
+		this.customers = customers;
+	}
 	
-	
-	public ArrayList<Product> getBuyProducts() {
+	public ArrayList<Product> getBuyProducts(){
 		return buyProducts;
 	}
+	
 	public void setBuyProducts(ArrayList<Product> buyProducts) {
-		this.buyProducts = buyProducts;
+		this.buyProducts= buyProducts;
 	}
 	
 	

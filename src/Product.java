@@ -1,6 +1,7 @@
+import java.util.ArrayList;
 
 public class Product {
-
+	
 	String name;
 	int price;
 	
@@ -21,5 +22,6 @@ public class Product {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	
 	
 }
